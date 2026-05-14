@@ -11,10 +11,11 @@ const customers = [
         id: 3, name: "Gowri", email: "gowri@gmail.com", phone: 9037534932
     }
 ];
-for (let customer of customers) {
-    console.log("Customer Id:", customer.id);
-    console.log("Name:", customer.name);
-    console.log("Email:", customer.email);
-    console.log("Phone:", customer.phone);
+for (const { id, name, email, phone } of customers) {
+    console.log(`
+    Customer Id : ${id}
+Name        : ${name}
+Email       : ${email}
+Phone       : ${phone ?? "Not Available"}`);
 }
 //# sourceMappingURL=CustomerObject.js.map
