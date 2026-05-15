@@ -1,18 +1,17 @@
 "use strict";
-// PARTIAL
 Object.defineProperty(exports, "__esModule", { value: true });
 let user1 = {};
-user1.name = "Krishna";
+user1.name = "Gowri";
 console.log(user1);
 let car1 = {
     brand: "Toyota",
     model: "Innova"
 };
 console.log(car1);
-// RECORD
+//Record
 const studentMarks = {
-    Krishna: 90,
-    Arjun: 85
+    krishna: 90,
+    Megha: 85
 };
 console.log(studentMarks);
 let p1 = {
@@ -20,32 +19,28 @@ let p1 = {
 };
 console.log(p1);
 let emp1 = {
-    name: "Krishna",
-    department: "HR"
+    name: "Krishna", department: "HR"
 };
 console.log(emp1);
 let value = true;
 console.log(value);
-// RETURNTYPE
+//Return type
 function getUser() {
     return {
-        name: "Krishna",
-        age: 22
+        name: "Krishna", age: 23
     };
 }
 let user2 = {
-    name: "Arjun",
-    age: 25
+    name: "Megha", age: 24
 };
 console.log(user2);
-// PARAMETERS
+//Parameters
 function display(name, age) {
 }
-let user3 = ["Krishna", 22];
+let user3 = ["Krishna", 23];
 console.log(user3);
 const student1 = {
-    name: "Krishna",
-    age: 22
+    name: "Krishna", age: 23
 };
 console.log(student1);
 //# sourceMappingURL=TsUtility.js.map
