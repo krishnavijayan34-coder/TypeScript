@@ -1,4 +1,4 @@
-let loggedUsers:string[]=[];
+
 class User{
     name:string;
     email:string;
@@ -8,24 +8,29 @@ class User{
     }
     login(username:string){
     console.log(username + " is logged in");
-    loggedUsers.push(username);
+    
     }
 }
 
 class Admin extends User{
     role:string;
+    users:string[]=[];
     constructor(name:string,email:string,role:string){
         super(name,email);
         this.role=role;
     }
+    login(username: string){
+        console.log(username + " is logged in");
+        this.users.push(username);
+    }
     viewUsers(){
-        console.log(loggedUsers);
+        console.log(this.users);
     }
 }
 let user1=new User("Krishna","krishnavijayan@gmail.com");
-let user2=new User("Arjun","arjun@gmail.com");
 user1.login("Krishna");
-user2.login("Arjun");
 let admin1=new Admin("Admin","admin@gmail.com","Manager")
+admin1.login("Krishna");
+admin1.login("Arjun");
 admin1.viewUsers();
 export {};

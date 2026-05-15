@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let loggedUsers = [];
 class User {
     name;
     email;
@@ -10,23 +9,27 @@ class User {
     }
     login(username) {
         console.log(username + " is logged in");
-        loggedUsers.push(username);
     }
 }
 class Admin extends User {
     role;
+    users = [];
     constructor(name, email, role) {
         super(name, email);
         this.role = role;
     }
+    login(username) {
+        console.log(username + " is logged in");
+        this.users.push(username);
+    }
     viewUsers() {
-        console.log(loggedUsers);
+        console.log(this.users);
     }
 }
 let user1 = new User("Krishna", "krishnavijayan@gmail.com");
-let user2 = new User("Arjun", "arjun@gmail.com");
 user1.login("Krishna");
-user2.login("Arjun");
 let admin1 = new Admin("Admin", "admin@gmail.com", "Manager");
+admin1.login("Krishna");
+admin1.login("Arjun");
 admin1.viewUsers();
 //# sourceMappingURL=userAdmin.js.map
