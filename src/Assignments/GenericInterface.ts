@@ -9,3 +9,5 @@ const joinText:Operation<string>=(a,b)=>{
     return a+b;
 };
 console.log("joined Text:",joinText("Welcome"," Krishna"));
+
+export {};
