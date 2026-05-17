@@ -29,4 +29,5 @@ console.log("After push:", inferredNumbers);
 let firstNumber = inferredNumbers[0];
 console.log("\nFirst element:");
 console.log(firstNumber);
+//example
 //# sourceMappingURL=Array.js.map
