@@ -4,7 +4,7 @@ interface Person {
     age: number;
     
 }
-type PersonKeys = keyof Person; // "name" | "age"
+type PersonKeys = keyof Person; 
 function printPersonProperty(person:Person,property:PersonKeys){
     console.log(person[property]);
 }
@@ -27,3 +27,28 @@ function createStringPair(
 }
 const result =createStringPair("country","India");
 console.log(result);
+//generic+keyof example
+function getProperty<T, K extends keyof T>(
+
+    obj: T,
+
+    key: K
+
+) {
+
+    return obj[key];
+
+}
+ 
+const product = {
+
+    id: 101,
+
+    name: "Laptop",
+
+    price: 50000
+
+};
+ 
+console.log(getProperty(product, "price"));
+ export {};

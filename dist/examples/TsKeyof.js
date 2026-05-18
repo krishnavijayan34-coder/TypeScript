@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function printPersonProperty(person, property) {
     console.log(person[property]);
 }
@@ -13,4 +14,14 @@ function createStringPair(property, value) {
 }
 const result = createStringPair("country", "India");
 console.log(result);
+//generic+keyof example
+function getProperty(obj, key) {
+    return obj[key];
+}
+const product = {
+    id: 101,
+    name: "Laptop",
+    price: 50000
+};
+console.log(getProperty(product, "price"));
 //# sourceMappingURL=TsKeyof.js.map
