@@ -1,9 +1,13 @@
-export type HttpMethod="GET"|"POST"|"PUT"|"DELETE";
+type HttpMethod="GET"|"POST"|"PUT"|"DELETE";
+type Resource="users"|"products"|"orders";
 
-export type Resource="users"|"products"|"orders";
+type ApiRoute=`${HttpMethod} /${Resource}`;
+type ApiRouteWithId=|`${HttpMethod}/${Resource}`
+                    |`${HttpMethod}/${Resource}/${number}`;
 
-type BaseRoute<T extends HttpMethod,K extends Resource>=`${T}/${K}`;
+const route1: ApiRouteWithId = "GET/users";
 
-type IdRoute<T extends HttpMethod,K extends Resource>=`${T}/${K}/:id`;
-
-export type ApiRoute=|BaseRoute<HttpMethod,Resource>|IdRoute<HttpMethod,Resource>;
+console.log(route1);
+const route2: ApiRouteWithId = "POST/products";
+const route3: ApiRouteWithId = "GET/users/1";
+const route4: ApiRouteWithId = "DELETE/orders/10";
