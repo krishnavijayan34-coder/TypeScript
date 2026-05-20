@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "None",
+    "outFile": "output.js",
+    "ignoreDeprecations": "6.0",
+    "strict": true
+  },
+  "files": [
+    "validators.ts",
+    "letters-validator.ts",
+    "zipcode-validator.ts",
+    "main.ts"
+  ]
+}
